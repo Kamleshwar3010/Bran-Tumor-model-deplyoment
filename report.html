@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='report.css') }}">
+    <script src="{{ url_for('static', filename='report.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+
+</head>
+<body>
+    <h2>Brain Tumor Prediction Report</h2>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Age:</strong> <span id="age"></span></p>
+    <p><strong>Gender:</strong> <span id="gender"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+
+    <h3>Uploaded MRI Image:</h3>
+    <img id="uploadedImage" src="" alt="Uploaded MRI Image" width="200">
+
+    <h3>Prediction Result:</h3>
+    <p id="result"></p>
+
+    <button id="downloadReportBtn">Download Report</button>
+</body>
+</html>
